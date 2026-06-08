@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>골프마켓</title>
+  <meta name="description" content="앱 기반 골프 중고거래 서비스 골프마켓" />
+  <style>
+    :root {
+      --bg: #f6f2e9;
+      --ink: #2b2118;
+      --accent: #f4a426;
+      --card: #fffaf2;
+      --line: #e8dcc8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, #fff3d8 0, transparent 40%),
+        radial-gradient(circle at 90% 15%, #ffe9bd 0, transparent 35%),
+        var(--bg);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 250, 242, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1.05;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin-top: 16px;
+      font-size: 18px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .visual {
+      min-height: 220px;
+      border-radius: 16px;
+      background:
+        linear-gradient(135deg, #ffd46a, #ffb83d),
+        repeating-linear-gradient(45deg, rgba(255,255,255,.15) 0 10px, transparent 10px 20px);
+    }
+
+    h2 { margin-top: 0; }
+
+    .download {
+      text-align: center;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .btn.primary { background: #111; color: #fff; }
+    .btn.secondary { background: #fff; color: #111; border-color: #d8d8d8; }
+
+    .contact form {
+      display: grid;
+      gap: 10px;
+      max-width: 720px;
+    }
+
+    input, textarea {
+      width: 100%;
+      font: inherit;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 11px 12px;
+      background: #fff;
+    }
+
+    .legal {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      font-size: 14px;
+      color: #5a4f42;
+    }
+
+    .links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .links a { color: inherit; text-decoration: none; }
+
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 54px 0; }
+      .topbar { padding: 8px 0; }
+      nav { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <a class="logo" href="#intro">골프마켓</a>
+      <nav>
+        <a href="#intro">앱 소개</a>
+        <a href="#download">앱 다운로드</a>
+        <a href="#partnership">협업 입점 문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="intro" class="hero">
+      <p>앱 기반 골프 중고거래 서비스</p>
+      <h1>골프마켓</h1>
+      <p>웹에서는 서비스 소개만 제공하고, 골프채/골프용품 등록과 채팅 등 실제 거래는 모바일 앱에서 진행되는 구조입니다.</p>
+    </section>
+
+    <section>
+      <div class="panel grid">
+        <div>
+          <h2>앱에서 더 빠른 거래</h2>
+          <p>푸시 알림과 실시간 대화로 골프용품 문의부터 거래 완료까지 빠르게 진행할 수 있습니다.</p>
+        </div>
+        <div class="visual" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="panel grid">
+        <div class="visual" aria-hidden="true"></div>
+        <div>
+          <h2>카테고리 기반 안전 거래</h2>
+          <p>드라이버, 아이언, 퍼터, 거리측정기 등 카테고리 중심 탐색과 후기 기반 신뢰 체계로 안심하고 거래할 수 있습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download panel">
+      <h2>앱 다운로드</h2>
+      <p>스토어에서 골프마켓 앱을 설치하고 거래를 시작하세요.</p>
+      <div class="btns">
+        <a class="btn primary" href="#">Google Play</a>
+        <a class="btn secondary" href="#">App Store</a>
+      </div>
+    </section>
+
+    <section id="partnership" class="contact panel">
+      <h2>협업 입점 문의</h2>
+      <p>제휴, 입점, 마케팅 협업 관련 문의를 남겨주세요.</p>
+      <form>
+        <label><input type="checkbox" /> 개인정보 수집 및 문의 응대에 동의합니다.</label>
+        <input type="text" placeholder="이름" />
+        <input type="text" placeholder="연락처" />
+        <textarea rows="4" placeholder="문의 내용을 입력해 주세요"></textarea>
+        <button class="btn primary" type="button">문의 보내기</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="wrap legal">
+    <div class="links">
+      <a href="#">개인정보 처리방침</a>
+      <a href="#">서비스 이용약관</a>
+      <a href="#">계정 및 데이터 삭제 안내</a>
+    </div>
+    <div>골프마켓 | 대표자 김도윤 | 사업자등록번호 123-45-67890</div>
+    <div>서울특별시 강남구 테헤란로 100 | support@golfmarket.example</div>
+  </footer>
+</body>
+</html>
