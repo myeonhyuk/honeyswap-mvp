@@ -112,7 +112,7 @@ export default function HomePage() {
     }
   ];
 
-  const shortcuts = ["골마켓 APP", "오늘의 특가", "중고존 핫딜", "부킹 마감임박", "커뮤니티 인기글"];
+  const shortcuts = ["골프올인원 APP", "오늘의 특가", "중고존 핫딜", "부킹 마감임박", "커뮤니티 인기글"];
 
   const communityPosts = [
     { id: 1, category: "스윙방", title: "드라이버 임팩트 때 손목 롤링 어떻게 하시나요?", comments: 28, views: 1840, date: "06.08" },
@@ -143,7 +143,7 @@ export default function HomePage() {
 
       <section className="gm-search-row" id="intro">
         <div className="gm-logo-block">
-          <strong>GOLF MARKET</strong>
+          <strong>GOLF ALL IN ONE</strong>
           <span>골프 중고거래 · 부킹 · 커뮤니티</span>
         </div>
         <div className="gm-search-wrap">
@@ -212,7 +212,7 @@ export default function HomePage() {
           <section className="gm-hero-banners">
         <article className="gm-hero-main-banner">
           <p className="gm-banner-kicker">WEEKLY HOT DEAL</p>
-          <h2>골프마켓 단독 특가전</h2>
+          <h2>골프올인원 단독 특가전</h2>
           <p>드라이버, 아이언, 퍼터, 골프백까지 주간 추천 상품을 한 번에 확인하세요.</p>
           <a href="#download" className="gm-banner-link">기획전 보러가기</a>
         </article>
@@ -304,7 +304,7 @@ export default function HomePage() {
 
       <section className="gm-cs" id="partnership">
         <article className="gm-cs-main">
-          <h3>골프마켓 고객센터</h3>
+          <h3>골프올인원 고객센터</h3>
           <strong>1544-1234</strong>
           <p>운영시간: 평일 09:00 ~ 18:00</p>
           <p>주말/공휴일은 1:1 문의 접수만 가능합니다.</p>
@@ -329,9 +329,9 @@ export default function HomePage() {
           <a href="#">이용약관</a>
           <a href="#">공지사항</a>
         </div>
-        <p>상호: 골프마켓 주식회사 | 대표자: 홍길동 | 사업자등록번호: 123-45-67890</p>
+        <p>상호: 골프올인원 주식회사 | 대표자: 홍길동 | 사업자등록번호: 123-45-67890</p>
         <p>주소: 서울 강남구 테헤란로 100 | 고객센터: 1544-1234 | support@golfmarket.example</p>
-        <p className="gm-note">골프마켓은 통신판매중개자이며, 상품/거래 정보의 당사자가 아닙니다.</p>
+        <p className="gm-note">골프올인원은 통신판매중개자이며, 상품/거래 정보의 당사자가 아닙니다.</p>
       </footer>
 
       <aside className="gm-quick-panel" aria-label="퀵메뉴">
