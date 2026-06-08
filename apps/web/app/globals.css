@@ -92,6 +92,22 @@ body {
   font-weight: 800;
 }
 
+/* 햄버거 버튼: 모바일에서만 표시 */
+.gm-hamburger {
+  display: none;
+  align-items: center;
+  gap: 3px;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f6f43;
+  cursor: pointer;
+  padding: 6px 4px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .topnav .nav-user,
 .topnav .nav-logout {
   display: none;
@@ -571,11 +587,7 @@ main {
 }
 
 @media (max-width: 760px) {
-  .topbar-inner {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
+  /* 이 블록의 topbar-inner 규칙은 하단 종합 모바일 블록에서 재정의됨 */
 
   .hero-market {
     grid-template-columns: 1fr;
@@ -2538,106 +2550,235 @@ main {
   margin-bottom: 6px;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE OVERRIDES — 골마켓 스타일 깔끔한 모바일 레이아웃
+   ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 760px) {
+
+  /* ── 헤더: 햄버거 | 로고(중앙) | 아이콘 ── */
+  .topbar {
+    background: rgba(255, 250, 240, 0.98);
+  }
   .topbar-inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    position: relative;
+    gap: 0;
+  }
+  .gm-hamburger {
+    display: flex;
+  }
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+  }
+  .topnav button,
+  .topnav a {
+    display: none;
+  }
+  .topnav::after {
+    content: "🔍";
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
   }
 
-  .topnav {
-    flex-wrap: wrap;
+  /* ── 전체 본문 패딩 ── */
+  .gm-main {
+    padding-top: 0;
   }
 
-  .gm-search-row {
-    grid-template-columns: 1fr;
-  }
-
-  .gm-layout-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gm-side-category {
+  /* ── 유틸리티바 숨김 ── */
+  .gm-utility-bar {
     display: none;
   }
 
-  .gm-search-shortcuts a {
-    padding: 8px 10px;
-  }
-
-  .gm-menu-wrap {
+  /* ── 검색 영역: 심플 모바일 ── */
+  .gm-search-row {
     grid-template-columns: 1fr;
-    align-items: start;
+    gap: 0;
+    padding: 10px 12px 8px;
+    margin-bottom: 0;
+  }
+  .gm-logo-block {
+    display: none;
+  }
+  .gm-top-actions {
+    display: none;
+  }
+  .gm-search-wrap {
+    grid-template-columns: 1fr 60px;
+  }
+  .gm-search-wrap input {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+  .gm-search-wrap button {
+    font-size: 13px;
   }
 
+  /* ── 바로가기 칩 ── */
+  .gm-search-shortcuts {
+    padding: 0 12px 8px;
+    gap: 6px;
+    margin: 0;
+  }
+  .gm-search-shortcuts a {
+    padding: 7px 10px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  /* ── 레이아웃: 사이드바 숨기고 1열 ── */
+  .gm-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .gm-side-category {
+    display: none;
+  }
+  .gm-content-area {
+    padding: 0 10px;
+  }
+
+  /* ── 메뉴바: 전체메뉴 버튼 + 가로스크롤 ── */
+  .gm-menu-wrap {
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+    align-items: center;
+    overflow: hidden;
+  }
   .gm-all-menu-btn {
-    width: fit-content;
-    height: 34px;
+    flex-shrink: 0;
+    font-size: 12px;
+    height: 32px;
+    padding: 0 10px;
   }
-
   .gm-menu-line {
     overflow-x: auto;
     white-space: nowrap;
     padding: 8px 0;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    gap: 6px;
   }
-
+  .gm-menu-line::-webkit-scrollbar {
+    display: none;
+  }
   .gm-menu-item .gm-menu-dropdown {
     display: none;
   }
 
-  .gm-utility-bar {
-    display: grid;
-    gap: 6px;
+  /* ── 마켓 상태바 ── */
+  .gm-market-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 11px;
+    align-items: center;
+  }
+  .gm-market-status span {
+    font-size: 11px;
+    padding: 3px 7px;
   }
 
+  /* ── 히어로 배너: 1열 ── */
   .gm-hero-banners {
     grid-template-columns: 1fr;
   }
-
-  .gm-market-status {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: flex-start;
+  .gm-hero-main-banner h2 {
+    font-size: 20px;
+    margin: 3px 0 5px;
+  }
+  .gm-hero-side-banner {
+    display: none;
   }
 
+  /* ── 부킹/조인 보드 ── */
   .gm-board-grid {
     grid-template-columns: 1fr;
   }
-
+  .gm-board-header h2 {
+    font-size: 17px;
+  }
   .gm-join-head,
   .gm-join-row {
     grid-template-columns: 80px 1fr 66px 50px;
+    font-size: 12px;
   }
-
   .gm-join-head span:nth-child(5),
   .gm-join-head span:nth-child(6),
   .gm-join-row span:nth-child(5),
   .gm-join-row span:nth-child(6) {
     display: none;
   }
-
   .gm-bj-list-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.5fr 1fr 0.7fr;
+    font-size: 12px;
     gap: 4px;
   }
-
-  .gm-bj-list-row.head {
+  .gm-bj-list-row > *:nth-child(4),
+  .gm-bj-list-row > *:nth-child(5) {
     display: none;
   }
-
-  .gm-product-grid {
-    grid-template-columns: 1fr;
+  .gm-bj-list-row.head {
+    font-size: 11px;
+  }
+  .gm-bj-cell {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  .gm-bj-tab {
+    padding: 7px 10px;
+    font-size: 13px;
   }
 
-  .gm-promo-row,
+  /* ── 가로 광고배너: full-width 1열 ── */
+  .gm-ad-banner-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  /* ── 세로 광고배너: 2열 ── */
+  .gm-ad-portrait-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  /* ── 프로모 카드: 1열 ── */
+  .gm-promo-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  /* ── 상품 그리드: 2열 ── */
+  .gm-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .gm-product-card h3 {
+    font-size: 13px;
+  }
+
+  /* ── CS / 고객센터 ── */
   .gm-cs {
     grid-template-columns: 1fr;
+    margin-top: 14px;
   }
 
+  /* ── 퀵패널 숨김 ── */
   .gm-quick-panel {
     display: none;
   }
 
+  /* ── 모바일 전화 링크 활성화 ── */
   .gm-mobile-call-link {
     pointer-events: auto;
     cursor: pointer;
@@ -2645,10 +2786,20 @@ main {
     font-weight: 700;
   }
 
+  /* ── 푸터 ── */
+  .gm-footer {
+    font-size: 11px;
+    padding: 12px 10px;
+  }
+  .gm-footer-links {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  /* ── 상품 상세 페이지 ── */
   .gm-item-top {
     grid-template-columns: 1fr;
   }
-
   .gm-item-action-row {
     grid-template-columns: 1fr;
   }

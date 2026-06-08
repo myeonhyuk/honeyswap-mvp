@@ -15,6 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <header className="topbar">
           <div className="topbar-inner">
+            <button className="gm-hamburger" aria-label="전체 메뉴">≡&nbsp;메뉴</button>
             <Link href="/" className="logo">
               골프마켓
             </Link>
