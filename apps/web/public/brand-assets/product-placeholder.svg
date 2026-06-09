@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="324" height="324" viewBox="0 0 324 324" fill="none">
+  <rect width="324" height="324" rx="18" fill="url(#bg)"/>
+  <rect x="18" y="18" width="288" height="288" rx="16" fill="rgba(255,255,255,0.76)" stroke="rgba(15,81,50,0.14)"/>
+  <text x="24" y="52" fill="#1F6F43" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="18" font-weight="800">Golf All In One</text>
+  <text x="24" y="100" fill="#133A2C" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="28" font-weight="900">골프올인원</text>
+  <text x="24" y="132" fill="#52645D" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="15" font-weight="500">프리미엄 골프 셀렉션</text>
+  <circle cx="236" cy="214" r="56" fill="#FFF3C5"/>
+  <path d="M208 254c8-36 18-67 32-92 7-12 23-12 30 0 11 18 20 41 28 68" stroke="#1F6F43" stroke-width="12" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="324" y2="324" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0B8"/>
+      <stop offset="1" stop-color="#E6F4E9"/>
+    </linearGradient>
+  </defs>
+</svg>

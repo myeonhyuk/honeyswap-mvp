@@ -44,6 +44,7 @@ body {
   color: var(--brand-strong);
   text-decoration: none;
   font-weight: 800;
+  font-size: 21px;
   letter-spacing: 0.2px;
 }
 
@@ -1235,6 +1236,10 @@ main {
 .gm-logo-block strong {
   font-size: 24px;
   color: #1f6f43;
+  font-family: "Montserrat", "SUIT", "Pretendard Variable", "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
 }
 
 .gm-logo-block span {
@@ -1429,12 +1434,12 @@ main {
   position: absolute;
   left: 0;
   top: calc(100% + 6px);
-  min-width: 188px;
+  min-width: 100px;
   border: 1px solid #d7dee5;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-  padding: 8px;
+  padding: 6px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(4px);
@@ -1457,7 +1462,7 @@ main {
   border-radius: 6px;
   font-size: 12px;
   color: #263445;
-  padding: 7px 8px;
+  padding: 6px 7px;
   text-decoration: none;
 }
 
@@ -1904,23 +1909,30 @@ main {
 .gm-ad-banner-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 0;
   margin-top: 12px;
+  align-items: stretch;
 }
 
 .gm-ad-banner-row a {
   display: block;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   line-height: 0;
+  position: relative;
+  aspect-ratio: 330 / 114;
+  width: 100%;
+  min-height: 0;
+  height: auto;
 }
 
 .gm-ad-banner-row img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  border-radius: 8px;
+  border-radius: 0;
   transition: opacity 0.2s;
+  object-fit: cover;
 }
 
 .gm-ad-banner-row a:hover img {
@@ -1933,6 +1945,7 @@ main {
   gap: 8px;
   margin-top: 8px;
   margin-bottom: 4px;
+  align-items: stretch;
 }
 
 .gm-ad-portrait-row a {
@@ -1940,19 +1953,89 @@ main {
   border-radius: 8px;
   overflow: hidden;
   line-height: 0;
+  position: relative;
+  aspect-ratio: 3 / 4;
+  min-height: 220px;
 }
 
 .gm-ad-portrait-row img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   border-radius: 8px;
   transition: opacity 0.2s;
+  object-fit: cover;
 }
 
 .gm-ad-portrait-row a:hover img {
   opacity: 0.9;
 }
+
+.gm-ad-copy {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: grid;
+  gap: 4px;
+  padding: 10px 11px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(12, 33, 24, 0.1), rgba(12, 33, 24, 0.75));
+  color: #f8fafc;
+}
+
+.gm-ad-copy-portrait {
+  bottom: 10px;
+}
+
+.gm-ad-copy strong {
+  font-size: 15px;
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+}
+
+.gm-ad-copy em {
+  font-style: normal;
+  font-size: 12px;
+  color: #e2f2e8;
+}
+
+.gm-ad-badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.94);
+  color: #0f5132;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.gm-ad-sample-mark {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  background: rgba(15, 81, 50, 0.6);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
 
 .gm-promo-row {
   margin-top: 16px;
@@ -2741,14 +2824,53 @@ main {
   /* ── 가로 광고배너: full-width 1열 ── */
   .gm-ad-banner-row {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 0;
     margin-top: 10px;
+  }
+
+  .gm-ad-banner-row a {
+    aspect-ratio: 330 / 114;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+  }
+
+  .gm-ad-copy {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    padding: 8px 9px;
+    gap: 3px;
+  }
+
+  .gm-ad-copy strong {
+    font-size: 12px;
+  }
+
+  .gm-ad-copy em {
+    font-size: 10px;
+  }
+
+  .gm-ad-badge {
+    font-size: 9px;
+    padding: 2px 7px;
   }
 
   /* ── 세로 광고배너: 2열 ── */
   .gm-ad-portrait-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 6px;
+  }
+
+  .gm-ad-portrait-row a {
+    aspect-ratio: 3 / 4;
+    min-height: 170px;
+  }
+
+  .gm-ad-sample-mark {
+    top: 38%;
+    font-size: 11px;
+    padding: 6px 11px;
   }
 
   /* ── 프로모 카드: 1열 ── */

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" fill="none">
+  <rect width="1200" height="240" rx="24" fill="url(#bg)"/>
+  <rect x="18" y="18" width="1164" height="204" rx="18" fill="rgba(255,255,255,0.8)" stroke="rgba(15,81,50,0.14)"/>
+  <text x="44" y="68" fill="#1F6F43" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="26" font-weight="800">GOLF ALL IN ONE</text>
+  <text x="44" y="122" fill="#143D2A" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="42" font-weight="900">이벤트 / 쿠폰 / 혜택</text>
+  <text x="44" y="164" fill="#4E665D" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="22" font-weight="500">신규 회원 혜택과 한정 쿠폰 소식을 빠르게 확인하세요</text>
+  <circle cx="1008" cy="120" r="80" fill="#1F6F43" fill-opacity="0.1"/>
+  <circle cx="1008" cy="120" r="56" fill="#1F6F43" fill-opacity="0.16"/>
+  <circle cx="1008" cy="120" r="32" fill="#F6C453" fill-opacity="0.95"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7D6"/>
+      <stop offset="1" stop-color="#E5F4E9"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" fill="none">
+  <rect width="1200" height="240" rx="24" fill="url(#bg)"/>
+  <rect x="18" y="18" width="1164" height="204" rx="18" fill="rgba(255,255,255,0.78)" stroke="rgba(15,81,50,0.14)"/>
+  <text x="44" y="68" fill="#1F6F43" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="26" font-weight="800">GOLF ALL IN ONE</text>
+  <text x="44" y="124" fill="#143D2A" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="44" font-weight="900">골프올인원 여름 핫딜</text>
+  <text x="44" y="166" fill="#466356" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="22" font-weight="500">드라이버, 아이언, 퍼터, 골프백까지 한 번에 둘러보세요</text>
+  <rect x="44" y="184" width="176" height="32" rx="16" fill="#1F6F43"/>
+  <text x="132" y="206" text-anchor="middle" fill="#FFF8EE" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="16" font-weight="700">지금 확인하기</text>
+  <circle cx="1002" cy="116" r="92" fill="#F6C453" fill-opacity="0.34"/>
+  <circle cx="1070" cy="86" r="46" fill="#FFE29A" fill-opacity="0.9"/>
+  <path d="M943 170c42-68 88-82 128-60 15 8 31 24 44 48" stroke="#1F6F43" stroke-width="12" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1B8"/>
+      <stop offset="0.55" stop-color="#FFE17C"/>
+      <stop offset="1" stop-color="#F7C948"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" fill="none">
+  <rect width="1200" height="240" rx="24" fill="url(#bg)"/>
+  <rect x="18" y="18" width="1164" height="204" rx="18" fill="rgba(255,255,255,0.82)" stroke="rgba(16,64,48,0.12)"/>
+  <text x="48" y="68" fill="#22543D" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="26" font-weight="800">Golf All In One</text>
+  <text x="48" y="120" fill="#133A2C" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="42" font-weight="900">브랜드 위크 특별전</text>
+  <text x="48" y="162" fill="#4A5E57" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="22" font-weight="500">인기 브랜드 클럽과 용품을 선별해 제안합니다</text>
+  <rect x="48" y="182" width="188" height="34" rx="17" fill="#22543D"/>
+  <text x="142" y="205" text-anchor="middle" fill="#FFFDF5" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="16" font-weight="700">브랜드관 보러가기</text>
+  <rect x="880" y="42" width="220" height="150" rx="24" fill="#FFF7D6"/>
+  <rect x="912" y="68" width="156" height="18" rx="9" fill="#DCEFD8"/>
+  <rect x="912" y="98" width="126" height="18" rx="9" fill="#F6D77A"/>
+  <rect x="912" y="128" width="172" height="18" rx="9" fill="#DCEFD8"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6F6EA"/>
+      <stop offset="1" stop-color="#FFE39A"/>
+    </linearGradient>
+  </defs>
+</svg>

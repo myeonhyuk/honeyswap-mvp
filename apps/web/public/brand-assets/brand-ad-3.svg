@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="520" viewBox="0 0 420 520" fill="none">
+  <rect width="420" height="520" rx="24" fill="url(#bg)"/>
+  <text x="30" y="56" fill="#1F6F43" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="22" font-weight="800">Golf All In One</text>
+  <text x="30" y="122" fill="#133A2C" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="40" font-weight="900">클럽 스페셜</text>
+  <text x="30" y="164" fill="#4B635B" font-family="Pretendard, Noto Sans KR, Segoe UI, sans-serif" font-size="20" font-weight="500">프리미엄 셀렉션 제안</text>
+  <circle cx="294" cy="330" r="92" fill="#FFF6D6"/>
+  <path d="M262 396c12-60 28-110 48-150 8-16 30-16 38 0 16 30 28 66 38 108" stroke="#1F6F43" stroke-width="18" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="420" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1BC"/>
+      <stop offset="1" stop-color="#E4F3E8"/>
+    </linearGradient>
+  </defs>
+</svg>

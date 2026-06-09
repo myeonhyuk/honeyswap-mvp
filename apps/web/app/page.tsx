@@ -14,7 +14,6 @@ export default function HomePage() {
   };
 
   const categories = [
-    "중고장터",
     "드라이버",
     "우드/유틸",
     "아이언",
@@ -84,35 +83,33 @@ export default function HomePage() {
       title: "금주 특가",
       link: "특가 전체보기",
       items: [
-        { name: "프리미엄 드라이버 컬렉션", price: "329,000원", originalPrice: "469,000원", tag: "오늘특가", sold: "131개 구매", image: `${GM_IMG}thumb-3731529073_zhogKNn1_100028429_324x324.jpg`, badges: ["무료배송", "카드할인"], zzim: 22 },
-        { name: "PXG 니켈 카브레라이 퍼터 모음", price: "199,000원", originalPrice: "289,000원", tag: "한정수량", sold: "55개 구매", image: `${GM_IMG}thumb-3731529073_OYq7Hlu4_PXG_EB8B88ECBC84ED8AB8_ECBA98EB9FACEC9BA8EC9DB4_ED8DBCED84B0_EBAAA8EC9D8C_1000_324x324.jpg`, badges: ["무료배송"], zzim: 8 },
-        { name: "다이나믹스 ZX5 초고거리 드라이버", price: "149,000원", originalPrice: "229,000원", tag: "무료배송", sold: "203개 구매", image: `${GM_IMG}thumb-3731529073_WDFs6lfc_1000_EB8BA4EC9DB4EC95842CZX5_ECA09CEAB1B0_324x324.jpg`, badges: ["무료배송", "카드할인"], zzim: 15 },
-        { name: "단독특가 아이언 모음", price: "119,000원", originalPrice: "189,000원", tag: "할인", sold: "95개 구매", image: `${GM_IMG}thumb-3731529073_aEYc7pPf_1000EB8BA8EB8F85ED8AB9EAB080_324x324.jpg`, badges: ["무료배송"], zzim: 5 }
+        { name: "프리미엄 드라이버 컬렉션", price: "329,000원", originalPrice: "469,000원", tag: "오늘특가", sold: "131개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송", "카드할인"], zzim: 22 },
+        { name: "PXG 니켈 카브레라이 퍼터 모음", price: "199,000원", originalPrice: "289,000원", tag: "한정수량", sold: "55개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송"], zzim: 8 },
+        { name: "다이나믹스 ZX5 초고거리 드라이버", price: "149,000원", originalPrice: "229,000원", tag: "무료배송", sold: "203개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송", "카드할인"], zzim: 15 },
+        { name: "단독특가 아이언 모음", price: "119,000원", originalPrice: "189,000원", tag: "할인", sold: "95개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송"], zzim: 5 }
       ]
     },
     {
       title: "신상품",
       link: "신상품 더보기",
       items: [
-        { name: "하이브리드 우드 유틸리티", price: "169,000원", originalPrice: "249,000원", tag: "신규", sold: "49개 구매", image: `${GM_IMG}thumb-3731529073_bzwDt3cM_600-2-ED9598EC9DB4EBB88CEBA6ACEB939CEC9CA0ED8BB8_324x324.jpg`, badges: ["무료배송"], zzim: 7 },
-        { name: "야마하 아이언 모음 초가", price: "699,000원", originalPrice: "899,000원", tag: "입문추천", sold: "38개 구매", image: `${GM_IMG}thumb-3731529073_iAgJlUhS_1000_EC9584EC9DB4EC96B8EBAAA8EC9D8C_EC95BCEBA788ED9598_ECB694EAB080_324x324.jpg`, badges: ["무료배송", "카드할인"], zzim: 11 },
-        { name: "무결점 스텝 웨지 컬렉션", price: "139,000원", originalPrice: "209,000원", tag: "무료배송", sold: "61개 구매", image: `${GM_IMG}thumb-3731529073_h3Zr4XLz_100028EBAFB8ECA688EB85B8ED8FACED95A829_324x324.jpg`, badges: ["무료배송"], zzim: 4 },
-        { name: "사이드 파크골프 클럽 패키지", price: "259,000원", originalPrice: "339,000원", tag: "신상", sold: "44개 구매", image: `${GM_IMG}thumb-3731529073_EhUCta0c_100028EC82ACEC9D80ED928829_324x324.jpg`, badges: ["무료배송", "카드할인"], zzim: 9 }
+        { name: "하이브리드 우드 유틸리티", price: "169,000원", originalPrice: "249,000원", tag: "신규", sold: "49개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송"], zzim: 7 },
+        { name: "야마하 아이언 모음 초가", price: "699,000원", originalPrice: "899,000원", tag: "입문추천", sold: "38개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송", "카드할인"], zzim: 11 },
+        { name: "무결점 스텝 웨지 컬렉션", price: "139,000원", originalPrice: "209,000원", tag: "무료배송", sold: "61개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송"], zzim: 4 },
+        { name: "사이드 파크골프 클럽 패키지", price: "259,000원", originalPrice: "339,000원", tag: "신상", sold: "44개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송", "카드할인"], zzim: 9 }
       ]
     },
     {
       title: "중고존 추천",
       link: "중고존 전체보기",
       items: [
-        { name: "아이언 세트 모음", price: "589,000원", originalPrice: "759,000원", tag: "인기", sold: "72개 구매", image: `${GM_IMG}thumb-3731529073_OWLl4msM_1000_324x324.jpg`, badges: ["검수완료"], zzim: 18 },
-        { name: "골프백/보스턴백 모음", price: "79,000원", originalPrice: "129,000원", tag: "검수완료", sold: "84개 구매", image: `${GM_IMG}thumb-3731529073_HlgK8aw5_EC8DB8EB84A4EC9DBC_1000281529_324x324.jpg`, badges: ["검수완료", "무료배송"], zzim: 6 },
-        { name: "골프장갑 모음", price: "29,000원", originalPrice: "59,000원", tag: "금주혜택", sold: "412개 구매", image: `${GM_IMG}thumb-3731529073_6VFz8cus_1000_2_324x324.jpg`, badges: ["무료배송"], zzim: 31 },
-        { name: "새상품 아이언 세트", price: "39,000원", originalPrice: "69,000원", tag: "빠른배송", sold: "120개 구매", image: `${GM_IMG}thumb-3731529073_WKMXeAGE_100028EC8BA0EAB79C29_324x324.jpg`, badges: ["무료배송"], zzim: 13 }
+        { name: "아이언 세트 모음", price: "589,000원", originalPrice: "759,000원", tag: "인기", sold: "72개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["검수완료"], zzim: 18 },
+        { name: "골프백/보스턴백 모음", price: "79,000원", originalPrice: "129,000원", tag: "검수완료", sold: "84개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["검수완료", "무료배송"], zzim: 6 },
+        { name: "골프장갑 모음", price: "29,000원", originalPrice: "59,000원", tag: "금주혜택", sold: "412개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송"], zzim: 31 },
+        { name: "새상품 아이언 세트", price: "39,000원", originalPrice: "69,000원", tag: "빠른배송", sold: "120개 구매", image: "/brand-assets/product-placeholder.svg", badges: ["무료배송"], zzim: 13 }
       ]
     }
   ];
-
-  const shortcuts = ["골프올인원 APP", "오늘의 특가", "중고존 핫딜", "부킹 마감임박", "커뮤니티 인기글"];
 
   const communityPosts = [
     { id: 1, category: "스윙방", title: "드라이버 임팩트 때 손목 롤링 어떻게 하시나요?", comments: 28, views: 1840, date: "06.08" },
@@ -121,6 +118,61 @@ export default function HomePage() {
     { id: 4, category: "중고거래 꿀팁", title: "중고 드라이버 살 때 꼭 확인해야 할 체크리스트 공유", comments: 19, views: 2240, date: "06.06" },
     { id: 5, category: "장비이야기", title: "테일러메이드 Qi10 vs 캘러웨이 패러독스 비교 사용기", comments: 37, views: 4850, date: "06.06" },
     { id: 6, category: "부킹/조인", title: "6/15(일) 경기도 남부권 조인 구합니다 (3인팀 1자리)", comments: 5, views: 480, date: "06.05" },
+  ];
+
+  const promoBanners = [
+    {
+      src: "https://www.golmarket.co.kr/data/banner/3731529073_rpNy8e1S_EC9584ED8AB8EBB3B4EB939C_1.png",
+      alt: "골프 클럽 제품 광고",
+      badge: "PRODUCT AD",
+      title: "드라이버/아이언 기획전",
+      subtitle: "정품 장비 특가 + 무료배송"
+    },
+    {
+      src: "https://www.golmarket.co.kr/data/banner/3731529073_YLyBVuZx_EC9584ED8AB8EBB3B4EB939C_2.png",
+      alt: "골프 악세서리 광고",
+      badge: "ACCESSORY",
+      title: "골프공/티/장갑 특가",
+      subtitle: "필수 용품 패키지 할인"
+    },
+    {
+      src: "https://www.golmarket.co.kr/data/banner/3731529073_EVYsBlvD_EC9584ED8AB8EBB3B4EB939C_3.png",
+      alt: "골프백 제품 광고",
+      badge: "BAG DEAL",
+      title: "골프백/보스턴백 세일",
+      subtitle: "브랜드 신상품 입고"
+    }
+  ];
+
+  const portraitBanners = [
+    {
+      src: "/uploads/portrait-ad-1.png",
+      alt: "골프공 광고",
+      badge: "BALL DEAL",
+      title: "투어볼 2+1",
+      subtitle: "제품 광고 한정 특가"
+    },
+    {
+      src: "/uploads/portrait-ad-2.png",
+      alt: "골프 악세서리 광고",
+      badge: "BAG & GEAR",
+      title: "골프백/파우치",
+      subtitle: "신상 제품 모음"
+    },
+    {
+      src: "/uploads/portrait-ad-3.png",
+      alt: "골프 클럽 제품 광고",
+      badge: "CLUB PICK",
+      title: "클럽 추천 제품",
+      subtitle: "스펙별 비교 구매"
+    },
+    {
+      src: "/uploads/portrait-ad-4.png",
+      alt: "골프 장비 제품 광고",
+      badge: "GEAR SALE",
+      title: "장비 풀세트 혜택",
+      subtitle: "드라이버/우드/유틸"
+    }
   ];
 
   const totalZzim = productSections
@@ -154,23 +206,6 @@ export default function HomePage() {
           <a href="#download"><span className="gm-action-icon">APP</span>앱 다운로드</a>
           <a href="#booking_join_board"><span className="gm-action-icon">SELL</span>판매 등록</a>
         </div>
-      </section>
-
-      <section className="gm-search-shortcuts" aria-label="주요 바로가기">
-        {shortcuts.map((item) => (
-          <a
-            key={item}
-            href={
-              item === "커뮤니티 인기글"
-                ? "#community"
-                : item === "부킹 마감임박"
-                  ? "#booking_join_board"
-                  : "#download"
-            }
-          >
-            {item}
-          </a>
-        ))}
       </section>
 
       <div className="gm-layout-grid">
@@ -223,19 +258,22 @@ export default function HomePage() {
         </article>
           </section>
 
-          <BookingJoinBoard />
-
           <section className="gm-ad-banner-row" aria-label="광고">
-            <a href="#download"><img referrerPolicy="no-referrer" src="https://www.golmarket.co.kr/data/banner/3731529073_oWy6amQs_23.png" alt="골프 특가 광고" /></a>
-            <a href="#download"><img referrerPolicy="no-referrer" src="https://www.golmarket.co.kr/data/banner/3731529073_xAasP0nS_25.png" alt="골프 브랜드 광고" /></a>
-            <a href="#download"><img referrerPolicy="no-referrer" src="https://www.golmarket.co.kr/data/banner/3731529073_Z7dRYV3m_12.png" alt="골프 이벤트 광고" /></a>
+            {promoBanners.map((item, idx) => (
+              <a key={item.src} href="#download" className={idx === 0 ? "gm-ad-first" : undefined}>
+                <img src={item.src} alt={item.alt} referrerPolicy="no-referrer" />
+                <span className="gm-ad-sample-mark" aria-hidden="true">SAMPLE</span>
+              </a>
+            ))}
           </section>
 
           <section className="gm-ad-portrait-row" aria-label="브랜드 광고">
-            <a href="#download"><img referrerPolicy="no-referrer" src="https://www.golmarket.co.kr/data/banner/3731529073_Glmxf8zW_47.png" alt="골프 용품 광고" /></a>
-            <a href="#download"><img referrerPolicy="no-referrer" src="https://www.golmarket.co.kr/data/banner/3731529073_VHJyK4I7_73_1.png" alt="골프 장비 광고" /></a>
-            <a href="#download"><img referrerPolicy="no-referrer" src="https://www.golmarket.co.kr/data/banner/3731529073_2UzKs50c_36.png" alt="골프 클럽 광고" /></a>
-            <a href="#download"><img referrerPolicy="no-referrer" src="https://www.golmarket.co.kr/data/banner/3731529073_aTicCfB0_13.png" alt="골프 액세서리 광고" /></a>
+            {portraitBanners.map((item) => (
+              <a key={item.src} href="#download">
+                <img src={item.src} alt={item.alt} referrerPolicy="no-referrer" />
+                <span className="gm-ad-sample-mark" aria-hidden="true">SAMPLE</span>
+              </a>
+            ))}
           </section>
 
           <section className="gm-promo-row">
@@ -252,6 +290,8 @@ export default function HomePage() {
           <p>브랜드 제휴와 프로모션 문의를 받습니다.</p>
         </article>
           </section>
+
+          <BookingJoinBoard />
 
           <div id="download" className="gm-section-stack">
         {productSections.map((section) => (
