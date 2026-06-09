@@ -146,28 +146,28 @@ export default function HomePage() {
 
   const portraitBanners = [
     {
-      src: "/uploads/portrait-ad-1.png",
+      src: "uploads/portrait-ad-1.png",
       alt: "골프공 광고",
       badge: "BALL DEAL",
       title: "투어볼 2+1",
       subtitle: "제품 광고 한정 특가"
     },
     {
-      src: "/uploads/portrait-ad-2.png",
+      src: "uploads/portrait-ad-2.png",
       alt: "골프 악세서리 광고",
       badge: "BAG & GEAR",
       title: "골프백/파우치",
       subtitle: "신상 제품 모음"
     },
     {
-      src: "/uploads/portrait-ad-3.png",
+      src: "uploads/portrait-ad-3.png",
       alt: "골프 클럽 제품 광고",
       badge: "CLUB PICK",
       title: "클럽 추천 제품",
       subtitle: "스펙별 비교 구매"
     },
     {
-      src: "/uploads/portrait-ad-4.png",
+      src: "uploads/portrait-ad-4.png",
       alt: "골프 장비 제품 광고",
       badge: "GEAR SALE",
       title: "장비 풀세트 혜택",
