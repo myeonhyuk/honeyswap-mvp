@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const regions = ["강북/경춘", "한강이남", "원주/영동", "충청", "영호남/제주"];
 
@@ -68,8 +68,41 @@ export default function BookingJoinBoard() {
     setSelected({ regionIdx, dateIdx });
   }
 
+  useEffect(() => {
+    const focusBoard = () => {
+      const board = document.getElementById("booking_join_board");
+      if (board instanceof HTMLElement) {
+        board.focus({ preventScroll: true });
+      }
+    };
+
+    const onHashChange = () => {
+      if (window.location.hash === "#booking_join_board") focusBoard();
+    };
+
+    const onDocClick = (e: MouseEvent) => {
+      const anchor = (e.target as Element).closest("a");
+      if (anchor?.getAttribute("href") === "#booking_join_board") {
+        const bjTab = anchor.getAttribute("data-bj-tab");
+        if (bjTab === "booking" || bjTab === "join") {
+          setTab(bjTab);
+        }
+        // 해시가 이미 같아서 hashchange가 발생하지 않는 경우 처리
+        setTimeout(focusBoard, 0);
+      }
+    };
+
+    if (window.location.hash === "#booking_join_board") focusBoard();
+    window.addEventListener("hashchange", onHashChange);
+    document.addEventListener("click", onDocClick);
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+      document.removeEventListener("click", onDocClick);
+    };
+  }, []);
+
   return (
-    <section className="gm-bj-board" id="booking_join_board">
+    <section className="gm-bj-board" id="booking_join_board" tabIndex={-1}>
       <div className="gm-bj-header">
         <div className="gm-bj-tabs">
           <button

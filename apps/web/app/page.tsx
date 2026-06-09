@@ -32,7 +32,7 @@ export default function HomePage() {
     {
       label: "부킹/조인",
       href: "#booking_join_board",
-      items: ["부킹 리스트", "조인 리스트", "마감임박", "지역별 현황"]
+      items: ["부킹 리스트", "조인 리스트"]
     },
     {
       label: "중고존",
@@ -220,7 +220,6 @@ export default function HomePage() {
 
         <div className="gm-content-area">
           <section className="gm-menu-wrap" aria-label="주요 메뉴">
-            <button type="button" className="gm-all-menu-btn">☰ 전체메뉴</button>
             <ul className="gm-menu-line">
               {menu.map((item) => (
                 <li key={item.label} className="gm-menu-item">
@@ -228,7 +227,16 @@ export default function HomePage() {
                   <div className="gm-menu-dropdown" aria-label={`${item.label} 하위 메뉴`}>
                     <ul>
                       {item.items.map((subItem) => (
-                        <li key={subItem}><a href="#download">{subItem}</a></li>
+                        <li key={subItem}>
+                          <a
+                            href={item.href}
+                            data-bj-tab={
+                              subItem === "부킹 리스트" ? "booking"
+                              : subItem === "조인 리스트" ? "join"
+                              : undefined
+                            }
+                          >{subItem}</a>
+                        </li>
                       ))}
                     </ul>
                   </div>

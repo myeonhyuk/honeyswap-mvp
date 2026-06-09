@@ -1649,6 +1649,7 @@ main {
 .gm-bj-board {
   --gm-bj-head-h: 34px;
   --gm-bj-row-h: 40px;
+  scroll-margin-top: 84px;
   margin-top: 12px;
   border: 1px solid #d8e1d8;
   background: #fff;
