@@ -39,35 +39,34 @@ const dates = getDates(25);
 
 export default function BookingJoinBoard() {
   const [tab, setTab] = useState<"booking" | "join">("booking");
-  const [selectedRegionIdx, setSelectedRegionIdx] = useState(0);
+  const [selected, setSelected] = useState<{ regionIdx: number; dateIdx: number }>({ regionIdx: 0, dateIdx: 0 });
 
   const counts = tab === "booking" ? bookingCounts : joinCounts;
   const listPath = tab === "booking" ? "/booking_list.php" : "/join_list.php";
 
-  const selectedRegion = regions[selectedRegionIdx];
+  const selectedRegion = regions[selected.regionIdx];
+  const selectedDate = dates[selected.dateIdx];
 
-  // 선택된 지역의 모든 날짜/시간대 데이터 생성
-  const selectedRows = dates.flatMap((d, dateIdx) => 
-    Array.from({ length: 4 }, (_, timeIdx) => {
-      const id = selectedRegionIdx * 10000 + dateIdx * 10 + timeIdx + 1;
-      const month = String(d.date.getMonth() + 1).padStart(2, "0");
-      const day = String(d.date.getDate()).padStart(2, "0");
-      const hour = String(6 + timeIdx * 2).padStart(2, "0");
-      const typeLabel = tab === "booking" ? "부킹" : "조인";
-      return {
-        id,
-        title: `${selectedRegion} ${typeLabel} ${timeIdx + 1}팀 모집`,
-        course: `${selectedRegion.split("/")[0]} CC`,
-        time: `${month}/${day} ${hour}:00`,
-        need: tab === "booking" ? `${2 + (timeIdx % 2)}팀` : `${1 + (timeIdx % 3)}명`,
-        status: timeIdx % 2 === 0 ? "모집중" : "마감임박",
-        href: `${listPath}?area=${selectedRegionIdx + 1}&year=${d.date.getFullYear()}&month=${month}&day=${day}`,
-      };
-    })
-  );
+  // 선택된 지역과 날짜의 4개 시간대 데이터만 생성
+  const selectedRows = Array.from({ length: 4 }, (_, timeIdx) => {
+    const id = selected.regionIdx * 10000 + selected.dateIdx * 10 + timeIdx + 1;
+    const month = String(selectedDate.date.getMonth() + 1).padStart(2, "0");
+    const day = String(selectedDate.date.getDate()).padStart(2, "0");
+    const hour = String(6 + timeIdx * 2).padStart(2, "0");
+    const typeLabel = tab === "booking" ? "부킹" : "조인";
+    return {
+      id,
+      title: `${selectedRegion} ${typeLabel} ${timeIdx + 1}팀 모집`,
+      course: `${selectedRegion.split("/")[0]} CC`,
+      time: `${month}/${day} ${hour}:00`,
+      need: tab === "booking" ? `${2 + (timeIdx % 2)}팀` : `${1 + (timeIdx % 3)}명`,
+      status: timeIdx % 2 === 0 ? "모집중" : "마감임박",
+      href: `${listPath}?area=${selected.regionIdx + 1}&year=${selectedDate.date.getFullYear()}&month=${month}&day=${day}`,
+    };
+  });
 
-  function selectRegion(regionIdx: number) {
-    setSelectedRegionIdx(regionIdx);
+  function selectCell(regionIdx: number, dateIdx: number) {
+    setSelected({ regionIdx, dateIdx });
   }
 
   useEffect(() => {
@@ -143,11 +142,11 @@ export default function BookingJoinBoard() {
                 <a
                   key={`${ri}-${di}`}
                   href={`${listPath}?area=${ri + 1}&year=${d.date.getFullYear()}&month=${String(d.date.getMonth() + 1).padStart(2, "0")}&day=${String(d.date.getDate()).padStart(2, "0")}`}
-                  className={`gm-bj-cell count${selectedRegionIdx === ri ? " selected" : ""}`}
+                  className={`gm-bj-cell count${selected.regionIdx === ri && selected.dateIdx === di ? " selected" : ""}`}
                   title={`${r} ${d.label} ${tab === "booking" ? "부킹" : "조인"}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    selectRegion(ri);
+                    selectCell(ri, di);
                   }}
                 >
                   {counts[ri][di]}
@@ -161,7 +160,7 @@ export default function BookingJoinBoard() {
       <div className="gm-bj-list" id={tab === "booking" ? "booking_list" : "join_list"}>
         <div className="gm-bj-list-head">
           <strong>{tab === "booking" ? "부킹" : "조인"} 현황</strong>
-          <span>{selectedRegion} · {selectedRows.length}건</span>
+          <span>{selectedRegion} · {selectedDate.label} · {selectedRows.length}건</span>
         </div>
         <div className="gm-bj-list-table">
           <div className="gm-bj-list-row head">
