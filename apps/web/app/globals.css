@@ -1815,6 +1815,8 @@ main {
 
 .gm-bj-list-table {
   display: grid;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .gm-bj-list-row {
