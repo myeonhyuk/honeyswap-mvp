@@ -253,17 +253,16 @@ export default function HomePage() {
           </section>
 
           <section className="gm-hero-banners">
-        <article className="gm-hero-main-banner">
-          <p className="gm-banner-kicker">WEEKLY HOT DEAL</p>
-          <h2>골프올인원 단독 특가전</h2>
-          <p>드라이버, 아이언, 퍼터, 골프백까지 주간 추천 상품을 한 번에 확인하세요.</p>
-          <a href="#download" className="gm-banner-link">기획전 보러가기</a>
-        </article>
-        <article className="gm-hero-side-banner">
-          <strong>중고 장비 판매 등록</strong>
-          <p>사진 3장과 기본 정보만 입력하면 등록 완료</p>
-          <a href="#booking_join_board">등록 가이드 보기</a>
-        </article>
+            <a className="gm-hero-image-banner" href="#download" aria-label="홀인원보험 안내">
+              <img src="uploads/hole-in-one-insurance-banner.png" alt="스마트스코어 원게임 홀인원보험 안내" />
+              <span className="gm-ad-sample-mark" aria-hidden="true">SAMPLE</span>
+            </a>
+            <article className="gm-hero-main-banner">
+              <p className="gm-banner-kicker">WEEKLY HOT DEAL</p>
+              <h2>골프올인원 단독 특가전</h2>
+              <p>드라이버, 아이언, 퍼터, 골프백까지 주간 추천 상품을 한 번에 확인하세요.</p>
+              <a href="#download" className="gm-banner-link">기획전 보러가기</a>
+            </article>
           </section>
 
           <section className="gm-ad-banner-row" aria-label="광고">
@@ -377,7 +376,7 @@ export default function HomePage() {
           <a href="#">이용약관</a>
           <a href="#">공지사항</a>
         </div>
-        <p>상호: 골프올인원 주식회사 | 대표자: 홍길동 | 사업자등록번호: 123-45-67890</p>
+        <p>상호: 골프올인원 주식회사 | 대표자: 송민주 | 사업자등록번호: 123-45-67890</p>
         <p>주소: 서울 강남구 테헤란로 100 | 고객센터: 1544-1234 | support@golfmarket.example</p>
         <p className="gm-note">골프올인원은 통신판매중개자이며, 상품/거래 정보의 당사자가 아닙니다.</p>
       </footer>

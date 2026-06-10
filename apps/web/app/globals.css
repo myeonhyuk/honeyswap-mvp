@@ -1507,21 +1507,41 @@ main {
 
 .gm-hero-banners {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
   gap: 10px;
   margin: 8px 0 6px;
 }
 
-.gm-hero-main-banner,
-.gm-hero-side-banner {
+.gm-hero-main-banner {
   border: 1px solid #dce6df;
   border-radius: 12px;
   background: #fff;
-  padding: 14px;
+  padding: 20px;
 }
 
 .gm-hero-main-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 220px;
   background: linear-gradient(125deg, #edf6ef, #ffffff 55%);
+}
+
+.gm-hero-image-banner {
+  position: relative;
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eaf7ff;
+}
+
+.gm-hero-image-banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
 }
 
 .gm-banner-kicker {
@@ -2777,12 +2797,17 @@ main {
   .gm-hero-banners {
     grid-template-columns: 1fr;
   }
+  .gm-hero-image-banner img {
+    min-height: 0;
+    aspect-ratio: 680 / 397;
+  }
+  .gm-hero-main-banner {
+    min-height: 0;
+    padding: 16px;
+  }
   .gm-hero-main-banner h2 {
     font-size: 20px;
     margin: 3px 0 5px;
-  }
-  .gm-hero-side-banner {
-    display: none;
   }
 
   /* ── 부킹/조인 보드 ── */
