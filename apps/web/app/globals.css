@@ -1815,17 +1815,19 @@ main {
 
 .gm-bj-list-table {
   display: grid;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .gm-bj-list-row {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 0.8fr 0.6fr 0.5fr;
-  gap: 8px;
-  padding: 10px 12px;
+  gap: 6px;
+  padding: 6px 8px;
   border-top: 1px solid #eef3ef;
   text-decoration: none;
   color: #1f2937;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .gm-bj-list-row.head {
