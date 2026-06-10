@@ -2687,12 +2687,6 @@ main {
   .topnav a {
     display: none;
   }
-  .topnav::after {
-    content: "🔍";
-    font-size: 20px;
-    cursor: pointer;
-    line-height: 1;
-  }
 
   /* ── 전체 본문 패딩 ── */
   .gm-main {
