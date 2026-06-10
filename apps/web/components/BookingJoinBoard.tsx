@@ -47,12 +47,12 @@ export default function BookingJoinBoard() {
   const selectedRegion = regions[selected.regionIdx];
   const selectedDate = dates[selected.dateIdx];
 
-  // 선택된 지역과 날짜의 모든 시간대 데이터 생성
-  const selectedRows = Array.from({ length: 4 }, (_, timeIdx) => {
+  // 선택된 지역과 날짜의 모든 시간대 데이터 생성 (04:00 ~ 22:00, 2시간씩 10개)
+  const selectedRows = Array.from({ length: 10 }, (_, timeIdx) => {
     const id = selected.regionIdx * 10000 + selected.dateIdx * 10 + timeIdx + 1;
     const month = String(selectedDate.date.getMonth() + 1).padStart(2, "0");
     const day = String(selectedDate.date.getDate()).padStart(2, "0");
-    const hour = String(6 + timeIdx * 2).padStart(2, "0");
+    const hour = String(4 + timeIdx * 2).padStart(2, "0");
     const typeLabel = tab === "booking" ? "부킹" : "조인";
     return {
       id,
